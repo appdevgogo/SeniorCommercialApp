@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Senior Commercial App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="ranking_text">인기상품 페이지</string>
+    <string name="home_text">홈 페이지</string>
+    <string name="search_text">검색 페이지</string>
+    <string name="launch_screen_slogan">슬로건</string>
+    <string name="bottom_tab_ranking">인기상품</string>
+    <string name="bottom_tab_home">홈</string>
+    <string name="bottom_tab_search">검색</string>
+</resources>
