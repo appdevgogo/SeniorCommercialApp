@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Senior Commercial App</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="ranking_text">인기상품 페이지</string>
     <string name="home_text">홈 페이지</string>
     <string name="search_text">검색 페이지</string>
@@ -8,4 +8,21 @@
     <string name="bottom_tab_ranking">인기상품</string>
     <string name="bottom_tab_home">홈</string>
     <string name="bottom_tab_search">검색</string>
+
+
+    <!-- Ranking name -->
+    <string name="name_1">종근당건강 락토핏 코어맥스 10통 + 30포</string>
+    <string name="name_2">제품명 2</string>
+    <string name="name_3">제품명 3</string>
+    <string name="name_4">제품명 4</string>
+    <string name="name_5">제품명 5</string>
+
+
+    <!-- Ranking price  -->
+    <string name="price_1">10,000원</string>
+    <string name="price_2">20,000원</string>
+    <string name="price_3">30,000원</string>
+    <string name="price_4">40,000원</string>
+    <string name="price_5">50,000원</string>
+
 </resources>

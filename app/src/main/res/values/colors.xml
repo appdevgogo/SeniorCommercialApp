@@ -10,4 +10,5 @@
     <color name="Gold">#FFFFD700</color>
     <color name="basic_blue">#0066FF</color>
     <color name="bottom_navi_tab_bg">#F5F5F5</color>
+    <color name="ranking_image_bg">#F5F5F5</color>
 </resources>
