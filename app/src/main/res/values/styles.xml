@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <style name="ranking_drawer_style" >
+        <item name="android:textColor">@color/drawer_item</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="bottom_navigation_inactive_style" >
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="bottom_navigation_active_style" >
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
+</resources>
+

@@ -12,17 +12,24 @@
 
     <!-- Ranking name -->
     <string name="name_1">종근당건강 락토핏 코어맥스 10통 + 30포</string>
-    <string name="name_2">제품명 2</string>
-    <string name="name_3">제품명 3</string>
-    <string name="name_4">제품명 4</string>
-    <string name="name_5">제품명 5</string>
+    <string name="name_2">내셔널지오그래픽 인기 BEST 뽀글이/다운/캐리어 단독특가!</string>
+    <string name="name_3">단 하루 5% 할인! 내 몸의 비타민 충전 오쏘몰</string>
 
 
     <!-- Ranking price  -->
-    <string name="price_1">10,000원</string>
+    <string name="price_1">13,000원</string>
     <string name="price_2">20,000원</string>
     <string name="price_3">30,000원</string>
-    <string name="price_4">40,000원</string>
-    <string name="price_5">50,000원</string>
+
+
+    <!-- HomeShopping name -->
+    <string name="shopping_1">롯데홈쇼핑</string>
+    <string name="shopping_2">현대홈쇼핑</string>
+    <string name="shopping_3">NH홈쇼핑</string>
+    <string name="shopping_4">우리홈쇼핑</string>
+
+
+    <!-- Ranking Drawer -->
+    <string name="ranking_drawer_header_title">홈쇼핑선택</string>
 
 </resources>

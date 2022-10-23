@@ -11,4 +11,7 @@
     <color name="basic_blue">#0066FF</color>
     <color name="bottom_navi_tab_bg">#F5F5F5</color>
     <color name="ranking_image_bg">#F5F5F5</color>
+    <color name="toolbar_bottom_line">#F5F5F5</color>
+    <color name="drawer_header_bg">#F5F5F5</color>
+    <color name="drawer_item">#9C9C9C</color>
 </resources>

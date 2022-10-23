@@ -1,32 +1,43 @@
 package com.example.seniorcommercialapp
 
 import android.os.Bundle
+import android.util.Log
+import android.view.*
+import androidx.appcompat.widget.Toolbar
+import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
+import androidx.drawerlayout.widget.DrawerLayout
+
 class RankingFragment : Fragment() {
+
+    private lateinit var toolbar: Toolbar
+    private lateinit var drawerLayout: DrawerLayout
 
     private lateinit var adapter: RankingAdapter
     private lateinit var recyclerView: RecyclerView
     private lateinit var rankingArrayList: ArrayList<RankingData>
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ranking, container, false)
-    }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+        val view = inflater.inflate(R.layout.fragment_ranking, container, false)
 
-        initRankingList()
+        //toolbar 세팅
+        toolbar = view.findViewById(R.id.toolbar)
+        toolbar.setNavigationIcon(R.drawable.ic_drawer_normal) //toolbar의 왼쪽 메뉴 아이콘 버튼
+        toolbar.setNavigationOnClickListener {
+            drawerLayout.openDrawer(GravityCompat.START)
+        }
 
+        //drawer 세팅
+        drawerLayout = view.findViewById(R.id.ranking_drawer_layout)
+
+        //ranking list 세팅
+        getRankingList()
         val layoutManager = LinearLayoutManager(context)
         recyclerView = view.findViewById(R.id.ranking_recycler_view)
         recyclerView.layoutManager = layoutManager
@@ -34,9 +45,12 @@ class RankingFragment : Fragment() {
         adapter = RankingAdapter(rankingArrayList)
         recyclerView.adapter = adapter
 
+
+        return view
     }
 
-    private fun initRankingList(){
+
+    private fun getRankingList(){
 
         rankingArrayList = arrayListOf(
             RankingData(img = R.drawable.p_img_01, name = getString(R.string.name_1), price = getString(R.string.price_1)),
@@ -45,4 +59,5 @@ class RankingFragment : Fragment() {
         )
 
     }
+
 }
