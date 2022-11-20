@@ -9,18 +9,15 @@
     <string name="bottom_tab_home">홈</string>
     <string name="bottom_tab_search">검색</string>
 
-
     <!-- Ranking name -->
-    <string name="name_1">종근당건강 락토핏 코어맥스 10통 + 30포</string>
-    <string name="name_2">내셔널지오그래픽 인기 BEST 뽀글이/다운/캐리어 단독특가!</string>
-    <string name="name_3">단 하루 5% 할인! 내 몸의 비타민 충전 오쏘몰</string>
-
+    <string name="ranking_name_1">종근당건강 락토핏 코어맥스 10통 + 30포</string>
+    <string name="ranking_name_2">내셔널지오그래픽 인기 BEST 뽀글이/다운/캐리어 단독특가!</string>
+    <string name="ranking_name_3">단 하루 5% 할인! 내 몸의 비타민 충전 오쏘몰</string>
 
     <!-- Ranking price  -->
-    <string name="price_1">13,000원</string>
-    <string name="price_2">20,000원</string>
-    <string name="price_3">30,000원</string>
-
+    <string name="ranking_price_1">13,000원</string>
+    <string name="ranking_price_2">20,000원</string>
+    <string name="ranking_price_3">30,000원</string>
 
     <!-- HomeShopping name -->
     <string name="shopping_1">롯데홈쇼핑</string>
@@ -28,8 +25,23 @@
     <string name="shopping_3">NH홈쇼핑</string>
     <string name="shopping_4">우리홈쇼핑</string>
 
-
     <!-- Ranking Drawer -->
     <string name="ranking_drawer_header_title">홈쇼핑선택</string>
+
+    <!-- Search name -->
+    <string name="search_name_1">[LG전자] 올레드 TV OLED77A1ENA (스탠드/벽걸이형)</string>
+    <string name="search_name_2">[세라젬][12/18/24개월무이자+사은품]척추온열 의료기기 마스터 V4 화이트 [5개 카드]</string>
+    <string name="search_name_3">[10만 적립(10/27~31)]클릭시 추가쿠폰★ 바디프랜드 팬텀2코어 안마의자 새상품 무상AS 5년</string>
+    <string name="search_name_4">[본사직영][고려은단] 비타민C 1000 600정+쇼핑백 포함</string>
+    <string name="search_name_5">[프라다]22FW 1BA156 2ERX F0002 모노크롬 스몰 숄더백 블랙</string>
+    <string name="search_name_6">[자코모] 비안나 하이 4인 기능성 슈렁큰 천연면피 소가죽 소파+스툴 (+가죽쿠션3개)</string>
+
+    <!-- Search price  -->
+    <string name="search_price_1">13,000원</string>
+    <string name="search_price_2">20,000원</string>
+    <string name="search_price_3">30,000원</string>
+    <string name="search_price_4">15,000원</string>
+    <string name="search_price_5">170,000원</string>
+    <string name="search_price_6">80,000원</string>
 
 </resources>

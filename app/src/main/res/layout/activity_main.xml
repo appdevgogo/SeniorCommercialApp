@@ -21,9 +21,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:itemBackground="@color/bottom_navi_tab_bg"
-        app:itemIconTint="@drawable/bottom_navi_tab_color"
+        app:itemIconTint="@drawable/co_bottom_navi_tab"
         app:itemIconSize="30dp"
-        app:itemTextColor="@drawable/bottom_navi_tab_color"
+        app:itemTextColor="@drawable/co_bottom_navi_tab"
         app:itemTextAppearanceActive="@style/bottom_navigation_active_style"
         app:itemTextAppearanceInactive="@style/bottom_navigation_inactive_style"
         app:menu="@menu/menu_bottom_navi" />

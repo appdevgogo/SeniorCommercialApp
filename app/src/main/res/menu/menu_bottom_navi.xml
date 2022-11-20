@@ -4,16 +4,16 @@
     <item
         android:id="@+id/rankingFragment"
         android:title="@string/bottom_tab_ranking"
-        android:icon="@drawable/bottom_navi_tab_ic_ranking"/>
+        android:icon="@drawable/ic_bottom_navi_tab_ranking"/>
 
     <item
         android:id="@+id/homeFragment"
         android:title="@string/bottom_tab_home"
-        android:icon="@drawable/bottom_navi_tab_ic_home"/>
+        android:icon="@drawable/ic_bottom_navi_tab_home"/>
 
     <item
         android:id="@+id/searchFragment"
         android:title="@string/bottom_tab_search"
-        android:icon="@drawable/bottom_navi_tab_ic_search"/>
+        android:icon="@drawable/ic_bottom_navi_tab_search"/>
 
 </menu>

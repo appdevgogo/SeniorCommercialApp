@@ -7,36 +7,40 @@ import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+
 
 class RankingFragment : Fragment() {
 
     private lateinit var toolbar: Toolbar
-    private lateinit var toolbar_title: TextView
+    private lateinit var toolbarTitle: TextView
 
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var drawerNavigationView: NavigationView
 
     private lateinit var adapter: RankingAdapter
     private lateinit var recyclerView: RecyclerView
-    private lateinit var rankingArrayList: ArrayList<RankingData>
+    private lateinit var rankingList: List<RankingData>
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
 
     ): View? {
 
+        callProductInfo()
+
         val view = inflater.inflate(R.layout.fragment_ranking, container, false)
 
         //toolbar 세팅
         toolbar = view.findViewById(R.id.toolbar)
-        toolbar_title = toolbar.findViewById(R.id.toolbar_title)
-        toolbar_title.text = "롯데홈쇼핑"
+        toolbarTitle = toolbar.findViewById(R.id.toolbar_title)
+        toolbarTitle.text = "롯데홈쇼핑"
         toolbar.setNavigationIcon(R.drawable.ic_drawer_normal) //toolbar의 왼쪽 메뉴 아이콘 버튼
         toolbar.setNavigationOnClickListener {
             drawerLayout.openDrawer(GravityCompat.START)
@@ -58,33 +62,55 @@ class RankingFragment : Fragment() {
         }
 
         //ranking list 세팅
-        getRankingList()
         val layoutManager = LinearLayoutManager(context)
-        recyclerView = view.findViewById(R.id.ranking_recycler_view)
+        recyclerView = view.findViewById(R.id.ranking_recyclerView)
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
-        adapter = RankingAdapter(rankingArrayList)
-        recyclerView.adapter = adapter
-
 
         return view
     }
 
+    private fun callProductInfo(){
+
+        val call = ApiObject.getProductInfo.getProductInfoAll(shopName = "lotte")
+        call.enqueue(object: Callback<List<RankingData>> {
+
+            override fun onResponse(call: Call<List<RankingData>>, response: Response<List<RankingData>>) {
+                val tag = "OnResponse : "
+                Log.d(tag, "호출 성공함")
+
+                if(response.isSuccessful) {
+                    rankingList = response.body() ?: listOf()
+                    val tag = "ProductData : "
+                    Log.d(tag, rankingList.toString())
+
+                    getRankingList()
+
+
+                }
+            }
+
+            override fun onFailure(call: Call<List<RankingData>>, t: Throwable) {
+
+                val tag = "OnResponse : "
+                Log.d(tag, "실패함")
+            }
+        })
+
+    }
 
     private fun getRankingList(){
 
-        rankingArrayList = arrayListOf(
-            RankingData(img = R.drawable.p_img_01, name = getString(R.string.name_1), price = getString(R.string.price_1)),
-            RankingData(img = R.drawable.p_img_02, name = getString(R.string.name_2), price = getString(R.string.price_2)),
-            RankingData(img = R.drawable.p_img_03, name = getString(R.string.name_3), price = getString(R.string.price_3))
-        )
+        adapter = RankingAdapter(rankingList)
+        recyclerView.adapter = adapter
+        adapter.notifyDataSetChanged()
 
     }
 
     private fun reloadFragment(text: String) {
 
-        toolbar_title = toolbar.findViewById(R.id.toolbar_title)
-        toolbar_title.text = text
+        toolbarTitle = toolbar.findViewById(R.id.toolbar_title)
+        toolbarTitle.text = text
     }
 
 }

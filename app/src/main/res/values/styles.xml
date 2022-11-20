@@ -15,5 +15,10 @@
         <item name="android:textSize">18sp</item>
     </style>
 
+    <style name="search_bar"  >
+        <item name="android:textSize">20sp</item>
+        <item name="android:textCursorDrawable">@drawable/ic_search_bar_cursor</item>
+    </style>
+
 </resources>
 

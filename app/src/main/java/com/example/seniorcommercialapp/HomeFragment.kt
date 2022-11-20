@@ -10,9 +10,9 @@ import androidx.recyclerview.widget.RecyclerView
 
 class HomeFragment : Fragment() {
 
-    private lateinit var adapter: RankingAdapter
+    private lateinit var adapter: HomeAdapter
     private lateinit var recyclerView: RecyclerView
-    private lateinit var rankingArrayList: ArrayList<RankingData>
+    private lateinit var homeList: List<HomeData>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,23 +25,24 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        initRankingList()
+        initHomeList()
 
         val layoutManager = LinearLayoutManager(context)
         recyclerView = view.findViewById(R.id.ranking_recycler_view)
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
-        adapter = RankingAdapter(rankingArrayList)
+        adapter = HomeAdapter(homeList)
         recyclerView.adapter = adapter
 
     }
 
-    private fun initRankingList(){
 
-        rankingArrayList = arrayListOf(
-            RankingData(img = R.drawable.p_img_01, name = getString(R.string.name_1), price = getString(R.string.price_1)),
-            RankingData(img = R.drawable.p_img_02, name = getString(R.string.name_2), price = getString(R.string.price_2)),
-            RankingData(img = R.drawable.p_img_03, name = getString(R.string.name_3), price = getString(R.string.price_3))
+    private fun initHomeList(){
+
+        homeList = listOf(
+            HomeData(img = R.drawable.p_img_01, title = getString(R.string.ranking_name_1), price = getString(R.string.ranking_price_1)),
+            HomeData(img = R.drawable.p_img_02, title = getString(R.string.ranking_name_2), price = getString(R.string.ranking_price_2)),
+            HomeData(img = R.drawable.p_img_03, title = getString(R.string.ranking_name_3), price = getString(R.string.ranking_price_3))
         )
 
     }
